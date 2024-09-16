@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mbb
+  jpa:
+    show-sql: true
+    hibernate:
+       ddl-auto: none 	  # Database initialization should typically be performed outside of Spring lifecycle
+    properties:
+       hibernate:
+         dialect: org.hibernate.dialect.SQLServerDialect
+         temp:
+           use_jdbc_metadata_defaults: false
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=testdb
+    username: test
+    password: Mika@2024
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    properties:
+       hibernate:
+         boot:
+           allow_jdbc_metadata_access: false
+
+logging:
+    file:
+        path: D:/IV/logs
